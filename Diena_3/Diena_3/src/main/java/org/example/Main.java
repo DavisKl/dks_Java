@@ -60,6 +60,6 @@ public class Main {
 
     public static void sample3(){
         Scanner sc = new Scanner(System.in);
-        
+
     }
 }
