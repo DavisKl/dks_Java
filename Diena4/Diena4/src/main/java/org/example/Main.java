@@ -2,72 +2,55 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        String a = "aaaa";
-//        String b = "bbbb";
-//        String c = "cccc";
-//        task1(a, b, c);
-//        task2("aaa", "bbb", "ccc");
+        String value1 = "aaa";
+        String value2 = "bbb";
+        String value3 = "ccc";
 
-//        homework1(10);
-        int sum = task3(4);
+        sampleWith(value1, value2, value3);
+        sample2(3);
+
+
+
+        int sum = task4(-1);
         System.out.println(sum);
 
-
-//        int result = sampleWithReturn();
-//        System.out.println(result);
-
-
-
     }
 
-    public static int task3(int count){
-        if(count < 1){
-            System.out.println("Kļūda");
-            return 0;
-        }
-
+    public static int task4(int number){
         int sum = 0;
-
-        for(int i = 1; i <= count; i++){
-            sum = sum + i;
+        if(number > 0){
+            for(int i = 0; i <= number; i++){
+                sum = sum + i;
+            }
+        } else {
+            sum = 0;
         }
-
         return sum;
+
+    }
+    public static void sample2(int a){
+        if(a >= 1){
+            for(int i = 0; i <= a; i++){
+                for(int j = 1; j <= i; j++){
+                    System.out.print("&");
+                }
+                System.out.println();
+            }
+        } else {
+            System.out.println("$");
         }
     }
-    public static int sampleWithReturn(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ievadi skaitli");
-        int a = sc.nextInt();
-
-        System.out.println("Ievadi skaitli");
-        int b = sc.nextInt();
-
-        int c = a + b;
-
-        return c;
-    }
 
 
-    public static void task1(String a, String b, String c){
-        System.out.println(c+b+a);
-    }
-    public static void task2 (String d, String e, String f){
-        int len = d.length() + e.length() + f.length();
+    public static void  sampleWith(String value1, String value2, String value3 ){
+        // System.out.println(value3 + value2 + value1);
+
+        int len = value3.length() + value2.length() + value1.length();
         if(len > 15){
-            System.out.println(d + f);
+            System.out.println(value1 + value3);
         }else {
-            System.out.println(f + e + d);
+            System.out.println(value1 + value2 + value3);
         }
 
     }
-    public static void homework1(int a) {
-        String symbol = "";
-        for (int i = 0; i < a; i++) {
-            symbol = symbol + "$";
-            System.out.println(symbol);
-        }
-
-    }
-
 }
