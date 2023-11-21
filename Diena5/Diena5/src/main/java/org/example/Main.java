@@ -4,7 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        big(2,5);
+
+        System.out.println(tasks.biggestNumber(4));
+
+        int number = big(2,4);
+        System.out.println(number);
+
+//        Samples.sample1();
+//        int a = Samples.sum();
+//        System.out.println(a);
+
+
 
 
 
@@ -14,16 +24,13 @@ public class Main {
 
 
     }
-    public static int big (int a, int b){
-        int result;
+    public static int big(int a, int b){
 
 
-        if( a >= b){
-            result= a;
-        } else if (a < b) {
-            result= b;
+        if(a >= b){
+            return a;
         }
-        return result;
+        return b;
 
 
     }
@@ -36,23 +43,5 @@ public class Main {
 
     }
 
-    public static int sum(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ievadiet skaitli!");
-        int sk1 = sc.nextInt();
 
-        System.out.println("Ievadiet skaitli!");
-        int sk2 = sc.nextInt();
-
-        return sk1 + sk2;
-    }
-    public static void task1(String symbols, int count){
-
-        String sum = "";
-        for(int i = 0; i < count; i++){
-            sum = sum + " " + symbols;
-            System.out.println(sum);
-        }
-
-    }
 }
