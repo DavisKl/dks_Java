@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Integer(3, 4);
+        big(2,5);
 
 
 
@@ -14,14 +14,14 @@ public class Main {
 
 
     }
-    public static void Integer (int a, int b){
+    public static int big (int a, int b){
         int result;
 
 
         if( a >= b){
-            result = a;
+            result= a;
         } else if (a < b) {
-            result = b;
+            result= b;
         }
         return result;
 
