@@ -4,9 +4,35 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int a = sum();
+        Integer(3, 4);
+
+
+
+
+//        int a = sum();
 //        task1("aa", 3);
 
+
+    }
+    public static void Integer (int a, int b){
+        int result;
+
+
+        if( a >= b){
+            result = a;
+        } else if (a < b) {
+            result = b;
+        }
+        return result;
+
+
+    }
+    public static String combineStrings(String param){
+        String result = "";
+        for(int i = 0; i < 10; i++){
+            result = result + param;
+        }
+        return result;
 
     }
 
