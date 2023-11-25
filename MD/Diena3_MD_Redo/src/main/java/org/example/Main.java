@@ -7,7 +7,7 @@ public class Main {
         md2();
         md1();
     }
-public static void md2(){ // Nezinot par MIN.VALUE
+public static void md2(){ // Nezinot par Integer.MIN_VALUE
         Scanner sc = new Scanner(System.in);
         int min = -999999;
         System.out.println("Ievadi skaitli");
