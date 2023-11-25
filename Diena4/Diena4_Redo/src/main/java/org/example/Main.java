@@ -1,7 +1,23 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+
+        tests(-1);
+
+        int result2 = task3(5);
+        System.out.println(result2);
+
+        String f = sampleFull("aaaaaa", "dddddddd", "Āfafafafa");
+        System.out.println(f);
+
+        String something = anotherSample();
+        System.out.println(something);
+
+        int result = sampleWithReturn();
+        System.out.println(result);
 
         task2b(-10);
 
@@ -20,6 +36,63 @@ public class Main {
         c = "wqdqdq";
         anotherSampleWithSample(c);
 
+    }
+
+    public static void tests(int count){
+        int result = 0;
+
+        if(count > 0) {
+            for (int i = 1; i < count + 1; i++) {
+                result = result + i;
+            }
+        }else if (count <= 0){
+            result = 0;
+        }
+        System.out.println(result);
+
+    }
+    public static int task3(int count){
+       int result = 0;
+       if(count > 0) {
+           for(int i = 1; i < count + 1; i++){
+               result = result + i;
+           }
+       }else if (count <= 0){
+           result = 0;
+       }
+       return result;
+
+
+    }
+
+
+
+    public static String sampleFull(String a, String b, String c){
+
+        String result = c + b + a;
+        if(result.length() > 15){
+            return c + b;
+        }else {
+            return result;
+        }
+
+    }
+
+    public static String anotherSample(){
+        String c = "atgriešanās";
+        return c;
+    }
+    public static int sampleWithReturn(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ievadi skaitli!");
+        int a = sc.nextInt();
+
+        System.out.println("ievadi otru skaitli!");
+        int b = sc.nextInt();
+
+        int c = a + b;
+
+        return c;
     }
     public static void task2b(int count){
         String a = "";
