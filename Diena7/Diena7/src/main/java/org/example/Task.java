@@ -10,15 +10,30 @@ public class Task {
         Scanner sc = new Scanner(System.in);
         String a = "";
 
-        System.out.println("Cik vērtības vēlieties pievienot listam?");
+        System.out.println("Skaits");
         int count = sc.nextInt();
-        List<String> randomList = new ArrayList<>(count);
 
 
-        for(int i = 0; i < randomList.size(); i++){
+        List<String> randomList = new ArrayList<>();
+        randomList.add("");
+
+
+
+
+        for(int i = 0; i < count; i++){
             System.out.println("Ievadi vēlamās string vērtības");
-            a = sc.nextLine();
-            randomList.add(a);
+
+            randomList.add(sc.next());
+        }
+        System.out.println("Izvadīt visus - 0");
+        System.out.println("Izvadīt konkrētu - number");
+
+        int choice = sc.nextInt();
+
+        if(choice == 0)){
+            System.out.println(randomList);
+        }else{
+            System.out.println();
         }
 
     }
