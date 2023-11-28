@@ -6,8 +6,43 @@ import java.util.Scanner;
 
 public class Task {
 
+
+    public static int task3(){
+        Scanner sc = new Scanner(System.in);
+
+        int a;
+        System.out.println("Ievadi skaitli!");
+
+        try{
+
+             a = sc.nextInt();
+        }catch (Exception e){
+            return 0;
+        }
+
+        return a;
+
+
+
+
+
+
+
+    }
+
+
+
     public static void task2(){
         Scanner sc = new Scanner(System.in);
+
+//        int sd;
+//        try{
+//            sd = sc.nextInt();
+//        }catch (Exception e){
+//
+//        }
+
+
         String a = "";
 
         System.out.println("Skaits");
