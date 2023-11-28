@@ -30,10 +30,10 @@ public class Task {
 
         int choice = sc.nextInt();
 
-        if(choice == 0)){
+        if(choice == 0){
             System.out.println(randomList);
         }else{
-            System.out.println();
+            System.out.println(randomList.get(choice));
         }
 
     }
