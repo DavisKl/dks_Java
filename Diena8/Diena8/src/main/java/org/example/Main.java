@@ -41,6 +41,7 @@ public class Main {
 
         }
 
+
     }
     public static void task1(){
         Scanner sc = new Scanner(System.in);
