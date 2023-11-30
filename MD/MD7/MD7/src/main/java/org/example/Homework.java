@@ -9,13 +9,15 @@ public class Homework {
         Scanner sc = new Scanner(System.in);
 
         int number = 0;
-        int max = Integer.MAX_VALUE;
+        boolean done = false;
 
-        while(number < max) {
+        while(!done) {
+            System.out.println("Ievdi skaitli!");
+            done = true;
             try {
-                System.out.println("Ievadi skaitli!");
+
                 number = sc.nextInt();
-                return number;
+
             } catch (Exception e) {
                 System.out.println("Simbols!");
                 number = sc.nextInt();
