@@ -13,7 +13,12 @@ public class Book {
         System.out.println("Grāmatas autors: " + author);
         System.out.println("Grāmatas nosaukums: " + title);
         System.out.println("Izdošanas gads: " + year);
+        System.out.println("------------------------");
+
+
     }
+
+
 
 
 
