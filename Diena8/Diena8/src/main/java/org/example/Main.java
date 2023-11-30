@@ -9,7 +9,6 @@ public class Main {
 
         Book input = new Book();
 
-        for(int i = 0; i < 2; i++){
             System.out.println("Ievadi grāmatas autoru!");
             input.author = sc.next();
             System.out.println("Ievadi grāmatas nosaukumu!");
@@ -17,7 +16,18 @@ public class Main {
             System.out.println("Ievadi grāmatas izdošanas gadu");
             input.year = sc.nextInt();
             input.printBook();
-        }
+
+
+        Book input2 = new Book();
+
+        System.out.println("Ievadi grāmatas autoru!");
+        input.author = sc.next();
+        System.out.println("Ievadi grāmatas nosaukumu!");
+        input.title = sc.next();
+        System.out.println("Ievadi grāmatas izdošanas gadu");
+        input.year = sc.nextInt();
+        input.printBook();
+
 
 
 

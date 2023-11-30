@@ -1,9 +1,13 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Book {
     public String author;
     public String title;
     public int year;
+
+
 
     public void printBook(){
         System.out.println("Grāmatas autors: " + author);
@@ -11,4 +15,10 @@ public class Book {
         System.out.println("Izdošanas gads: " + year);
     }
 
+
+
+
+
 }
+
+
