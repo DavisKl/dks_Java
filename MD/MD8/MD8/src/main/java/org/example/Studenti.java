@@ -71,13 +71,7 @@ public class Studenti {
         System.out.println("-------------------");
     }
     //
-    public static int giveList(int count){
 
-        for(int i = 0; i> count; i++){
-            System.out.println();
-        }
-
-    }
 }
 
 
