@@ -37,12 +37,17 @@ public class Main {
             System.out.println("ievadi kursu");
             int course = sc.nextInt();
             studentsList.add(new Students(name, lastName, course));
-            studentsList.get(i).print();
 
+        }
+
+        for(int i = 0; i<studentsList.size(); i++){
+            studentsList.get(i).print();
         }
 
 
     }
+
+
     public static void task1(){
         Scanner sc = new Scanner(System.in);
 
