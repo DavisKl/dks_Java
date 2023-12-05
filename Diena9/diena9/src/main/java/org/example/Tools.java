@@ -6,21 +6,21 @@ import java.util.Scanner;
 
 public class Tools {
 
-        List<Pet> petIDList = new ArrayList<>();
 
 
 
 
 
 
-    public static List<Pet>petIDList(){
+
+    public static List<Pet>petIDList(int a){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ievadiet sarakstu skaitu!");
-        int count = sc.nextInt();
         List<Pet> petIDList = new ArrayList<>();
 
 
-        for (int i = 0; i < count; i++){
+
+
+        for (int i = 0; i < a; i++){
 
             System.out.println("Ievadi dzīvnieka vārdu!");
             String petName = sc.next();
@@ -32,10 +32,14 @@ public class Tools {
             String email = sc.next();
             petIDList.add(new Pet(petName, type, age, email));
 
+
         }
         return petIDList;
     }
 
+public static void addPet(List<Pet>lst){
+        
+}
 
 
 }
