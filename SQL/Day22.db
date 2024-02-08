@@ -1,0 +1,14 @@
+CREATE TABLE Employee(
+id INTEGER PRIMARY KEY,
+name TEXT(30),
+surname TEXT(30),
+exp INTEGER (30)
+);
+
+DROP TABLE Employee;
+
+INSERT INTO Employee(id, name, surname, exp)
+VALUES
+(1, 'Andris', 'Arajs', 3),
+(2, 'Juris', 'Jukaiss', 7),
+(3, 'Zane', 'Zuzane', 5);
