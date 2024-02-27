@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        employeeOutput();
-        Connection conn = Employee.connect();
-        Employee.readEmployee(conn);
+        Saraksts.converter();
+//        employeeOutput();
+//        addToJson();
 
     }
     public static void employeeOutput(){
@@ -25,6 +25,8 @@ public class Main {
         double employeeExpYears = sc.nextDouble();
         Employee emp1 = new Employee(employeeName, employeeSurname, employeeExpYears);
         emp1.print();
+
+
         Gson g = new Gson();
         String json = g.toJson(emp1);
         System.out.println(json);
@@ -43,4 +45,11 @@ public class Main {
         List<Employee> lst2 = Arrays.asList(g.fromJson(json2,Employee[].class));
         System.out.println(lst2.get(2).employeeName);
     }
+
+//    public static void addToJson(){
+//        Gson g = new Gson();
+//        List<Employee> sqlEmployeeList = new ArrayList<>();
+//        sqlEmployeeList.add(Employee.connect());
+//
+//    }
 }
