@@ -17,13 +17,13 @@ public class DemoController {
     private DemoServiss demoServiss;
 
     @RequestMapping(value="/employees", method= RequestMethod.GET)
-    List<Employee> getEmployee(){
+    List<Employee> getEmployees(){
         System.out.println("This is random message");
-        return demoServiss.getEmployeeLst();
+        return demoServiss.getEmployees();
     }
     @RequestMapping(value="/employees/{id}", method = RequestMethod.GET)
     Employee getEmployeeByID(@PathVariable int id){
-        return demoServiss.getEmployeeByID(id);
+        return demoServiss.getEmployeesByID(id);
     }
 
 }

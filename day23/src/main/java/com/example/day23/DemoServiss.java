@@ -13,19 +13,14 @@ import java.util.List;
 public class DemoServiss {
 
     public List<Employee> getEmployees(){
-        List<Employee> lst = new ArrayList<>();
-        lst.add(new Employee(1, "Jānis", "Bērziņš", 1));
-        lst.add(new Employee(2, "Anna", "Daugava", 3));
-        lst.add(new Employee(3, "Andrios", "Pibana", 6));
+        Connection conn = Connect.connect();
+        List<Employee> lst = Connect.getEmployees(conn);
         return lst;
     }
 
-    public Employee getEmployee(int id){
-        List<Employee> lst = new ArrayList<>();
-
-        lst.add(new Employee(1, "Jānis", "Bērziņš", 1));
-        lst.add(new Employee(2, "Anna", "Daugava", 3));
-        lst.add(new Employee(3, "Aldis", "Valdis", 7));
+    public Employee getEmployeesByID(int id){
+        Connection conn = Connect.connect();
+        List<Employee> lst = Connect.getEmployees(conn);
 
         for(Employee e : lst){
             if(e.id == id){
@@ -42,7 +37,7 @@ public class DemoServiss {
         try{
             Connection conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("Select id, employeeName, employeeSurname, employeeExpYears FROM Employees");
+            ResultSet rs = stmt.executeQuery("Select * FROM Employees");
 
             while (rs.next()) {
                 Employee employee = new Employee(
@@ -64,9 +59,31 @@ public class DemoServiss {
     }
 
     public Employee getEmployeeByID(int id){
-        List<Employee> employeeList = getEmployeeLst();
+        String url = "jdbc:sqlite:C:\\Users\\davis\\Desktop\\Tests\\rcs_Java\\SQL\\Day23MD.db";
+        List<Employee> EmployeeLst = new ArrayList<>();
 
-            for(Employee e : employeeList){
+        try{
+            Connection conn = DriverManager.getConnection(url);
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("Select * FROM Employees");
+
+            while (rs.next()) {
+                Employee employee = new Employee(
+                        rs.getInt("id"),
+                        rs.getString("employeeName"),
+                        rs.getString("employeeSurname"),
+                        rs.getDouble("employeeExpYears"));
+                EmployeeLst.add(employee);
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        }catch (Exception e){
+            System.out.println("Connection failed");
+        }
+
+            for(Employee e : EmployeeLst){
                 if(e.id == id){
                     return e;
                 }
