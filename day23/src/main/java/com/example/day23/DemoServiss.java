@@ -30,6 +30,12 @@ public class DemoServiss {
         return null;
     }
 
+    public Employee getEmpByID(int id){
+        Connection conn = Connect.connect();
+        Employee e = Connect.getEmployeeByID(conn, id);
+        return e;
+    }
+
     public List<Employee> getEmployeeLst(){
         String url = "jdbc:sqlite:C:\\Users\\davis\\Desktop\\Tests\\rcs_Java\\SQL\\Day23MD.db";
         List<Employee> EmployeeLst = new ArrayList<>();
@@ -65,7 +71,7 @@ public class DemoServiss {
         try{
             Connection conn = DriverManager.getConnection(url);
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * FROM Employees");
+            ResultSet rs = stmt.executeQuery("Select * FROM Employees WHERE id =" + id);
 
             while (rs.next()) {
                 Employee employee = new Employee(
@@ -75,9 +81,7 @@ public class DemoServiss {
                         rs.getDouble("employeeExpYears"));
                 EmployeeLst.add(employee);
             }
-            rs.close();
-            stmt.close();
-            conn.close();
+
 
         }catch (Exception e){
             System.out.println("Connection failed");

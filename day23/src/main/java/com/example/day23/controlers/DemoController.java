@@ -23,7 +23,7 @@ public class DemoController {
     }
     @RequestMapping(value="/employees/{id}", method = RequestMethod.GET)
     Employee getEmployeeByID(@PathVariable int id){
-        return demoServiss.getEmployeesByID(id);
+        return demoServiss.getEmpByID(id);
     }
 
 }
