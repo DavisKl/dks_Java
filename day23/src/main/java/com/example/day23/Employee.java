@@ -4,7 +4,7 @@ public class Employee {
     public int id;
     public String employeeName;
     public String employeeSurname;
-    public double employeeExpYears;
+    public Double employeeExpYears;
 
     public Employee(int id, String employeeName, String employeeSurname, double employeeExpYears){
         this.id = id;
